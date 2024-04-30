@@ -1,9 +1,10 @@
-import { Center, Flex, Image } from '@chakra-ui/react';
-import React from 'react';
-import SearchInput from './SearchInput';
-import RightContent from './RightContent/RightContent';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/firebase/clientApp';
+import { Flex, Image } from '@chakra-ui/react';
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Directory from './Directory/Directory';
+import RightContent from './RightContent/RightContent';
+import SearchInput from './SearchInput';
 
 const Navbar: React.FC<any> = () => {
 
@@ -36,12 +37,9 @@ const Navbar: React.FC<any> = () => {
                     alt="reddit_icon"
                 />
             </Flex>
-            <SearchInput />
+            {user && <Directory />}
+            <SearchInput user={user} />
             <RightContent user={user} />
-
-            {/* 
-            <Directory/>            
-            */}
         </Flex>
     )
 }
