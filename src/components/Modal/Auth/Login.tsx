@@ -32,7 +32,6 @@ const Login: React.FC<LoginProps> = () => {
         signInWithEmailAndPassword(loginForm.email, loginForm.password);
     };
 
-
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         // update form state
         setLoginForm(prev => ({
