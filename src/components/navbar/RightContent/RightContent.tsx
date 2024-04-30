@@ -25,6 +25,7 @@ const RightContent: React.FC<RightContentProps> = ({ user }) => {
                         Logout
                     </Button>
                 </div>) : (<AuthButtons />)}
+                {/* <<Menu /> */}
             </Flex>
         </>
     );

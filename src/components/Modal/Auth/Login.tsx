@@ -102,6 +102,19 @@ const Login: React.FC<LoginProps> = () => {
                 {FIREBASE_ERRORS[error?.message as keyof typeof FIREBASE_ERRORS]}
             </Text>
             <Flex fontSize="9pt" justifyContent="Center">
+                <Text mr={1}>Forgot your password?</Text>
+                <Text
+                    color="blue.500"
+                    fontWeight={700}
+                    cursor="pointer"
+                    onClick={() => {
+                        setAuthModelState((prev) => ({
+                            ...prev, view: "resetPassword"
+                        }))
+                    }}
+                >Reset</Text>
+            </Flex>
+            <Flex fontSize="9pt" justifyContent="Center">
                 <Text mr={1}>New Here?</Text>
                 <Text
                     color="blue.500"
