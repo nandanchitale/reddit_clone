@@ -55,6 +55,6 @@ const Header: React.FC<HeaderProps> = ({ communityData }) => {
                 </Flex>
             </Flex>
         </Flex>
-    )
+    );
 }
 export default Header;
